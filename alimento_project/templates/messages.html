@@ -1,0 +1,18 @@
+{% if messages %}
+
+    {% for message in messages %}
+
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show text-center my-0" role="alert">
+            <strong>
+                <!-- {{message.tags | title}}  -->
+                {{message}}
+            </strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    {% endfor %}
+
+{% endif %}
+
+
+<!-- Even if you know there is only one message, you should still iterate over the messages sequence, because otherwise the message storage will not be cleared for the next request. -->

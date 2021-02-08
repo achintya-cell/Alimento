@@ -1,0 +1,52 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark rebeccapurple">
+    <div class="container-fluid">
+
+        <div class="navbar-brand">
+            <a class="navbar-brand" href="#">Alimento</a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between d-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav flex-row mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'items' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'orders' %}">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">ContactUs</a>
+                </li>
+            </ul>
+            {% if request.user.is_authenticated %}
+            <div class="d-flex justify-content-end ">
+                <a href="{% url 'logout' %}"><button type="button" class="btn btn-danger">Logout: {{user.username}}</button></a>
+            </div>
+            {% else %}
+            <div class="d-flex justify-content-end ">
+                <a href="{% url 'login' %}"><button type="button" class="btn btn-success">Sign in</button></a>
+                <a href="{% url 'register' %}"><button type="button" class="btn btn-primary">Sign Up</button></a>
+            </div>
+            {% endif %}
+            <ul class="navbar-nav flex-row mb-2 mb-lg-0">
+                </li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a>
+                <li><a href="#"><i class="fab fa-instagram"></i></a>
+                <li><a href="#"><i class="fab fa-twitter"></i></a>
+                <li><a href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+        </div>
+
+
+    </div>
+
+    </div>
+</nav>

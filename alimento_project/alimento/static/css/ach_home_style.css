@@ -1,0 +1,55 @@
+:root{
+    --purple: rgb(137, 59, 216);
+    --white: white;
+    --green: rgb(60,166,45);
+    --pink: rgb(255, 255, 255);
+}
+nav.rebeccapurple{
+    background-color: rebeccapurple ;
+}
+.img-responsive{
+    height: 100vh!important;
+    position: relative;
+    opacity: .5;
+}
+.carousel-caption{
+    position: absolute;
+    top:30%;
+    left:30px;
+    text-align: left;
+    bottom:50%;
+}
+.caption-text{
+    font-size: 2.5rem;
+    color: var(--purple);
+    font-weight: bolder;
+}
+.caption-sub-text{
+    font-size: 1.4rem;
+    color: rgb(131, 45, 216);
+    font-weight: 300;
+}
+.surprise-meal-bg{
+    background-color: var(--purple);
+    color:var(--white);
+}
+i{
+    font-size: 1.25rem;
+    padding:0 5px;
+    color:white;
+}
+button[type="button"]:first-child{
+    margin-right: 5px;
+}
+/* .purple-link{
+    background-color: var(--purple);
+} */
+.green-text{
+    color:var(--green);
+}
+.purple-text{
+    color:var(--purple);
+}
+.pink-text{
+    color:var(--pink);
+}

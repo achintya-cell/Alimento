@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+    <div class="row justify-content-around my-5 px-5">
+        {% for item in items %}
+        <div class="card col-auto" style="width: 18rem;">
+            <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.category }}" title="{{ item.category }}">
+            <div class="card-body">
+                <h5 class="card-title text-center">{{ item.name }}</h5>
+                <p class="card-text">{{ item.description|safe }}</p>
+                <a href="#" class="btn btn-success mx-auto d-block">₹ {{ item.price }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
